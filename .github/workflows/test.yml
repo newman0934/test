@@ -1,0 +1,14 @@
+name: second action
+on:
+  push:
+    branches:
+      - master
+
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: print greeting
+        run: echo "greeting"
+      - name: print byebye
+        run: echo "bye bye"
