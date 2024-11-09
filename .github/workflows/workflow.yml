@@ -1,0 +1,13 @@
+name: first workflow
+on:
+  push:
+    branches:
+      - master
+jobs:
+  build:
+    runs-on: ubuntu-lastest
+    steps:
+      - name: print greeting
+        run: echo "hello world"
+      - name: say good bye
+        run: echo "bye bye"
