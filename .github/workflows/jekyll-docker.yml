@@ -1,0 +1,18 @@
+name: first action
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: echo greeting
+      run: echo "hello world"
+    - name: say good bye
+      run: echo "bye bye"
