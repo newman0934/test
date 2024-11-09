@@ -7,9 +7,6 @@ on:
   push:
     branches:
       - master
-  #每8個小時更新一次
-  schedule:
-	  - cron: "0 */8 * * *"
 	#對master發PR的時候
 	pull_request:
 		branches:
