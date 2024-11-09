@@ -1,5 +1,5 @@
-name: first action
- on: 
+name: first action 
+on: 
   push:
     branches:
       - master
