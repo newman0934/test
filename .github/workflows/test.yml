@@ -1,25 +1,16 @@
-#自定義名稱
 name: first action
- 
-#執行這個workflow的時機
-on: 
-	#push master branch的時候
+ on: 
   push:
     branches:
       - master
-	#對master發PR的時候
 	pull_request:
 		branches:
 			- master
 jobs:
-  #自定義job name
   build: 
-    #執行在什麼環境
     runs-on: ubuntu-latest 
     steps:
-		    #步驟1
-      - name: print greeting #步驟名稱
-        run: echo "greeting" #執行命令
-        #步驟2
-      - name: print byebye #步驟名稱
-        run: echo "bye bye" #執行命令
+      - name: print greeting 
+        run: echo "greeting" 
+      - name: print byebye 
+        run: echo "bye bye" 
