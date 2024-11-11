@@ -1,7 +1,5 @@
 name: first action
-on:
-  pull_request:
-    types: [opened]
+on: [ push ]
 env: #給所有jobs用的環境變數
   API_URL: https://api.example.com
 jobs:
