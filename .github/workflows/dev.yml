@@ -1,0 +1,14 @@
+name: build dev project
+on: 
+  push:
+    - master
+    - dev
+    - staging    #event trigger
+jobs:
+  build:
+    runs-on: ubuntu-latest #runner
+    steps:
+      - name: checkout code 
+        run: echo "checkout code"
+      - name: build
+        run: npm run build
