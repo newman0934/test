@@ -1,9 +1,8 @@
 name: build dev project
 on: 
   push:
-    - master
-    - dev
-    - staging    #event trigger
+    branches:
+      - master  #event trigger
 jobs:
   build:
     runs-on: ubuntu-latest #runner
