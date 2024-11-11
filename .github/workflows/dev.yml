@@ -1,8 +1,5 @@
 name: first action
-on: 
-  push:
-    branches:
-      - master
+on: [workflow_run]
 jobs:
   build: 
     runs-on: ubuntu-latest 
