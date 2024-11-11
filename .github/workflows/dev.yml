@@ -1,16 +1,20 @@
 name: first action
-on: [ workflow_dispatch ]
+on:
+  pull_request:
+    types: [opened]
+env: #給所有jobs用的環境變數
+  API_URL: https://api.example.com
 jobs:
   build: 
-    runs-on: ubuntu-latest 
+    runs-on: ubuntu-latest
     steps:
       - name: print greeting #步驟名稱
         run: echo "greeting" #執行命令(action)
       - name: print byebye #步驟名稱
-        run: echo "bye bye" #執行命令(action)
+        run: echo ${{ env.API_URL }} #執行命令(action)
       - name: create node.js env
         uses: actions/setup-node@v4
         with:
           node-version: 18
       - name: install
-        run: npm ci
+        run: echo ${{ secrets.API_KEY }}
