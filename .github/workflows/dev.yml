@@ -1,13 +1,13 @@
-name: build dev project
+name: first action
 on: 
   push:
     branches:
-      - master  #event trigger
+      - master
 jobs:
-  build:
-    runs-on: ubuntu-latest #runner
+  build: 
+    runs-on: ubuntu-latest 
     steps:
-      - name: checkout code 
-        run: echo "checkout code"
-      - name: build
-        run: npm run build
+      - name: print greeting #步驟名稱
+        run: echo "greeting" #執行命令(action)
+      - name: print byebye #步驟名稱
+        run: echo "bye bye" #執行命令(action)
