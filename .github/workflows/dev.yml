@@ -13,6 +13,7 @@ jobs:
         run: echo "bye bye" #執行命令(action)
   deploy: 
     runs-on: ubuntu-latest 
+    needs: build
     steps:
       - name: print deploy #步驟名稱
         run: echo "deploy" #執行命令(action)
