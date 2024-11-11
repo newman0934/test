@@ -11,3 +11,9 @@ jobs:
         run: echo "greeting" #執行命令(action)
       - name: print byebye #步驟名稱
         run: echo "bye bye" #執行命令(action)
+jobs:
+  deploy: 
+    runs-on: ubuntu-latest 
+    steps:
+      - name: print deploy #步驟名稱
+        run: echo "deploy" #執行命令(action)
