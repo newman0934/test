@@ -11,9 +11,9 @@ jobs:
         run: echo "greeting" #執行命令(action)
       - name: print byebye #步驟名稱
         run: echo "bye bye" #執行命令(action)
-  deploy: 
-    runs-on: ubuntu-latest 
-    needs: build
-    steps:
-      - name: print deploy #步驟名稱
-        run: echo ${{ github.repository }} #執行命令(action)
+      - name: create node.js env
+        uses: actions/setup-node@v4
+        with:
+          node-version: 18
+      - name: install
+        run: npm ci
