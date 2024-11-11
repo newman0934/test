@@ -16,4 +16,4 @@ jobs:
     needs: build
     steps:
       - name: print deploy #步驟名稱
-        run: echo "deploy" #執行命令(action)
+        run: echo ${{ github }} #執行命令(action)
